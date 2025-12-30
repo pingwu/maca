@@ -1,0 +1,130 @@
+# 🚀 Amplify Your Capability and Unlock Your Aspirations
+
+  **The new professional superpower is not coding; it's orchestrating AI agents to build for you.**
+
+  Whether you're an experienced developer looking to **amplify your capability** 10x through AI-assisted workflows, or someone with domain expertise ready to **unlock your aspirations** by transforming ideas into working solutions—this repository provides production-ready project examples for mastering AI-augmented development.
+
+  **Used in California Science and Technology University's ETTP program AI-Assisted Software Development** as supplemental lab materials, study guide, and knowledge graph, these projects teach you to build complete, deployable applications by "instructions in plan English" (that is deeper than "Vibe") to orchestrate AI agents as your development partners.
+  
+---
+
+### 🤔 The pain points on Your AI Journey
+
+Before diving into tools, many aspiring creators face a dilemma:
+
+1.  *"How do I know what AI tools can do for me if I don't know what's possible?"* (What to do?)
+2.  "How to use those tools for the best result?" (How to do it?)
+3.  *"What do I really want to accomplish, regardless of any specific tool?"* (why I want to do it?)
+
+**Our philosophy is different: Start with your *vibe*.**
+
+This is not about the choice of a platform, a specific tool, or memorizing commands. It's about developing a new intuition—a **"vibe" for problem-solving with AI**. It's about learning to express your goals and frustrations in a way that AI agents can understand. You don't need to be a coder or programmer to establish such "coding vocabulary" in order to communicate with AI Agents; you just need to learn to describe the patterns of the problems in your domain. This repository is your toolbox and playground for developing a rich vocabulary in daily English (or any major written language), so you can create the results you want. (hint: Jobs, inventions, application, or any process breakthrough in your own domain)
+
+---
+
+### 🛠️ The DIY Path: Start Building in Minutes
+
+Ready to dive in? For the self-motivated learner, here's how to get your first AI-augmented application running in under two hours.
+This path is designed to answer the first question: 'What can AI tools do for me?'
+
+1.  **Clone the Repository:**
+    ```bash
+    git clone https://github.com/pingwu/maca.git
+    cd maca
+    ```
+2.  **Follow the Quick Start Guide:**
+    *   **[Quick Start Guide](./docs/setup/quick-start.md)** — Install your complete AI coding environment (Docker, AI Agents, etc.).
+3.  **Build Your First Project:**
+    *   Start with the **[Content Generator](./project-01-content-generator/)**. You'll have a working, full-stack AI application deployed and running by the end of the day.
+
+> **A Note for Your Journey:**
+> *   **For Coders:** Think of these projects as a robust starting point. The value is not in the sample code itself, but in learning to use AI agents to extend, refactor, and build upon it at a professional level.
+> *   **For Non-Coders:** Your advantage is your domain expertise. Start with a problem you know well. Think about *what* you want to create, *who* it's for, and the *value* it will provide. The AI will be your technical partner to bring that vision to life.
+
+---
+
+### 🎓 The Guided Path: Join a Cohort
+
+While the tools are powerful, the mindset is paramount. A structured, collaborative environment is the fastest way to master the "agentic process."
+This path answers the question of how to best harness AI tools.
+
+In our cohort-based courses, you will:
+*   Receive live, expert instruction.
+*   Get personalized feedback on your projects.
+*   Collaborate with a community of fellow AI-augmented developers.
+
+**Interested in a structured, hands-on learning experience?**
+* Contact me for the workshops [mailto:ping@ping-ai.com?subject:AI Coding Agent Cohort Inquiry](mailto:ping@ping-ai.com?subject=AI%20Coding%20Agent%20Cohort%20Inquiry) or
+* [Subscribe to my newsletter](https://ping-ai.com/contact) 
+
+---
+
+### 🧠 About the Creator
+
+This repository and its underlying philosophy are based on the work of Ping Wu. With a deep background in enterprise software evolution at companies like **IBM, SAP, and Gilead Sciences**, Ping now focuses on teaching the "agentic process" to the next generation of creators.
+
+His work is centered on the idea that AI can be a partner for achieving ambitious goals with less stress and more creative flow.
+
+**Want to bring this mindset to your organization?** or need a guided session to find your "why?"
+* [Contact me for the engagements](mailto:ping@ping-ai.com)
+
+---
+
+### 🧰 The Toolbox: Your AI Agent Team
+
+A successful AI-augmented performer knows how to choose the right agent for the job. This repository gives you a production-ready toolkit of AI coding assistants.
+
+| Agent Name        | Key Strength                               |
+| ----------------- | ------------------------------------------ |
+| **Claude Code**   | Complex Reasoning & Code Review            |
+| **DeepAgent**     | Autonomous, Multi-Step Code Generation     |
+| **Cursor Agent**  | Real-time, In-Editor Coding Assistance     |
+| **Gemini CLI**    | Comprehensive Codebase Analysis            |
+| **Copilot Agent** | GitHub Integration & Version Control       |
+
+*   **[See the Full Agent Comparison and Workflow Guide](./docs/glossary/coding-agents.md)**
+*   **[Understanding AI Coding Assistants](./docs/understanding-ai-coding-assistants.md)** - Conceptual overview
+*   Coverage of non-programming tools is in progress. 
+
+### 🚀 The Portfolio: Your Proof of Work
+
+This repository contains a series of projects designed to build your portfolio. Each one demonstrates a key skill that employers are looking for.
+
+| Project                                       | What You'll Learn                        |
+| --------------------------------------------- | ---------------------------------------- |
+| **[01-content-generator](./project-01-content-generator/)** | Multi-Agent Systems & Real-Time UI       |
+| **[02-expense-tracker](./project-02-expense-tracker/)**     | AI-Powered Business Automation           |
+| **[03-task-tracker](./project-03-task-tracker/)**         | Natural Language Interfaces & APIs       |
+| **[04-Google-OAuth](./project-04-Google-OAuth/)**           | Enterprise Authentication & Security     |
+| **[adk-quickstart](./adk-quickstart/)**                     | Containerized AI Deployment (Docker)     |
+
+---
+
+### 📚 Documentation & Resources
+
+#### Getting Started Guides
+*   **[Glossary Hub](./docs/glossary-README.md)** - Knowledge graph of core concepts and definitions
+*   **[WSL Setup Guide](./docs/wsl-setup-guide.md)** - Windows development environment configuration
+*   **[Environment Variables](./docs/environment-variable.md)** - Secure configuration management across platforms
+*   **[Understanding AI Coding Assistants](./docs/understanding-ai-coding-assistants.md)** - AI tools landscape
+*   **[Understanding Shell Commands](./docs/understanding-shell-commands.md)** - Shell command capabilities for AI-assisted development
+*   **[Claude Code Installation](./docs/claude-code-installation-guide.md)** - AI coding assistant setup
+
+#### Core Concepts
+*   **[System Administrator Privileges](./docs/glossary/system-administrator.md)** - Cross-platform admin access explained
+*   **[API Keys](./docs/glossary/api-key.md)** - What they are and how to use them securely
+*   **[AI Coding Agents Comparison](./docs/glossary/coding-agents.md)** - Complete tool comparison guide
+
+#### Learning Paths
+*   **[The Full 6-Week (13 classes) Learning Path](./docs/learning-path.md)**
+*   **[Career Outcomes & Professional Benefits](./docs/career-outcomes.md)**
+
+---
+
+### 🤝 Contributing & Community
+
+This is an open-source project. Contributions are welcome! Please see our [**Contributing Guidelines**](https://github.com/pingwu/multi-ai-coding-agent/blob/main/CONTRIBUTING.md) for details.
+
+### 📄 License
+
+This project is licensed under the MIT License. See the [LICENSE](node_modules/bl/LICENSE.md) file for details.
