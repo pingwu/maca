@@ -1,0 +1,46 @@
+services:
+  content-generator:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - ./generated_content:/app/generated_content
+    env_file:
+      - .env  # Development: primary source
+    environment:
+      # Production override capability (optional)
+      # Only sets if variable exists in shell AND is not in .env
+      - OPENAI_API_KEY
+      - SERPER_API_KEY
+      - LLM_MODEL
+      - CORS_ALLOW_ORIGINS
+      - ENVIRONMENT
+    stdin_open: true
+    tty: true
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 512M
+    command: python -m uvicorn my_mas.web_api:app --host 0.0.0.0 --port 8000
+
+  # Frontend service
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    environment:
+      - REACT_APP_API_URL=http://localhost:8000
+    depends_on:
+      - content-generator
+    healthcheck:
+      test: ["CMD-SHELL", "node -e \"require('http').get('http://127.0.0.1:3000', r => process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))\""]
+      interval: 30s
+      timeout: 10s
+      start_period: 30s
+      retries: 3
