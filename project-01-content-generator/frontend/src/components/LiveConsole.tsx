@@ -159,7 +159,9 @@ const LiveConsole: React.FC<LiveConsoleProps> = ({ onBack }) => {
     }
 
     console.log('Connecting WebSocket for Job ID:', jobId); // Added log
-    const wsUrl = `ws://${window.location.host}/ws/console/${jobId}`;
+    // Use wss:// for HTTPS pages, ws:// for HTTP pages
+    const wsProtocol = window.location.protocol === 'https:' ? 'wss:' : 'ws:';
+    const wsUrl = `${wsProtocol}//${window.location.host}/ws/console/${jobId}`;
     const ws = new WebSocket(wsUrl);
     wsRef.current = ws;
 

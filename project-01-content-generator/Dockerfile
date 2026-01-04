@@ -41,4 +41,5 @@ RUN chown -R app:app /app
 USER app
 
 # Default command - run the web API
-CMD ["python", "-m", "uvicorn", "my_mas.web_api:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]
+# Use PORT env var for Cloud Run compatibility (defaults to 8000 for local dev)
+CMD python -m uvicorn my_mas.web_api:app --host 0.0.0.0 --port ${PORT:-8000}

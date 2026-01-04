@@ -1,0 +1,40 @@
+# Production build for Cloud Run
+FROM node:18-alpine AS builder
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install all dependencies (including devDependencies for build)
+RUN npm install
+
+# Copy source code
+COPY . .
+
+# Build production app
+RUN npm run build
+
+# Production stage - serve with lightweight http server
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Install serve globally
+RUN npm install -g serve
+
+# Copy built app from builder
+COPY --from=builder /app/build ./build
+
+# Cloud Run uses PORT environment variable
+ENV PORT=8080
+
+# Create non-root user
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
+
+EXPOSE 8080
+
+# Serve the build directory on PORT
+# -s flag enables SPA mode (all routes serve index.html)
+CMD serve -s build -l $PORT

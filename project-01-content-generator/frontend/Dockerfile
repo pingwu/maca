@@ -1,28 +1,48 @@
-# Use an official Node.js runtime as a parent image
-FROM node:18-alpine
+# Multi-stage build for production frontend
+FROM node:18-alpine AS builder
 
-# Set the working directory in the container
 WORKDIR /app
 
-# Copy package.json and package-lock.json (if available)
+# Copy package files
 COPY package*.json ./
 
-# Install dependencies
+# Install ALL dependencies (needed for build)
 RUN npm install
 
-# Copy the rest of the application's source code
+# Copy source code
 COPY . .
 
-# Ensure non-root permissions and drop privileges
-RUN chown -R node:node /app
-USER node
+# Build the React app
+RUN npm run build
 
-# Make port 3000 available to the world outside this container
-EXPOSE 3000
+# Production stage
+FROM node:18-alpine
 
-# Lightweight healthcheck without curl using Node's http module
-HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
-  CMD node -e "require('http').get('http://127.0.0.1:3000', r => process.exit(r.statusCode===200?0:1)).on('error',()=>process.exit(1))"
+WORKDIR /app
 
-# Run the app when the container launches
-CMD ["npm", "start"]
+# Copy package files
+COPY package*.json ./
+
+# Install ONLY production dependencies
+RUN npm install --only=production
+
+# Copy server.js
+COPY server.js ./
+
+# Copy built React app from builder stage
+COPY --from=builder /app/build ./build
+
+# Create non-root user
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup && \
+    chown -R appuser:appgroup /app
+
+USER appuser
+
+# Cloud Run will set PORT=8080
+ENV PORT=8080
+ENV NODE_ENV=production
+
+EXPOSE 8080
+
+# Start the proxy server
+CMD ["npm", "run", "serve"]

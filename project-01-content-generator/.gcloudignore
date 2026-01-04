@@ -70,7 +70,7 @@ poetry.lock
 Pipfile.lock
 
 # Docker files (Cloud Run builds its own containers)
-Dockerfile
+# Dockerfile  # COMMENTED OUT - Cloud Run needs this for --source deployments
 docker-compose.yml
 docker-compose.*.yml
 

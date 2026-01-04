@@ -28,7 +28,9 @@ services:
 
   # Frontend service
   frontend:
-    build: ./frontend
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile.dev
     ports:
       - "3000:3000"
     volumes:
