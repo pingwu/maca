@@ -93,6 +93,7 @@ Think of an AI coding agent as a **smart assistant that helps you write, edit, a
 | **Amazon CodeWhisperer** | AWS integration                        | IDE extension<br>See [AWS CodeWhisperer](https://aws.amazon.com/codewhisperer/)                       | (In your editor) | **Best for AWS development.** Trained on AWS APIs, free tier available.                                                            |
 | **Abacus.AI CodeLLM**    | Multi-model agentic coding             | `npm install -g @abacus-ai/cli`<br>See [Abacus AI Desktop](https://desktop.abacus.ai/)                | `abacusai`       | **Multi-model intelligence.** Switches between GPT-5/Claude Sonnet, 74% SWE-Bench Verified score, includes ChatLLM ($10/month).    |
 | **Atlassian Rovo Dev**   | Atlassian ecosystem integration        | Install ACLI: `brew install acli`<br>See [Rovo Dev](https://www.atlassian.com/software/rovo-dev)      | `acli rovodev`   | **Top SWE-bench performer (41.98%).** Deep Jira/Bitbucket/Confluence integration, enterprise-ready, powered by Teamwork Graph.     |
+|**Amazon Kiro**| Amazon Kiro IDE |download from [Kiro.dev](https://kiro.dev/) | (from desktop application) | **Amazon AWS** Kiro excels at structured, spec-driven development with comprehensive documentation. |
 
 ---
 
