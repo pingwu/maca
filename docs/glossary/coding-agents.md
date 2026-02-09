@@ -93,6 +93,7 @@ Think of an AI coding agent as a **smart assistant that helps you write, edit, a
 | **Amazon CodeWhisperer** | AWS integration                        | IDE extension<br>See [AWS CodeWhisperer](https://aws.amazon.com/codewhisperer/)                       | (In your editor) | **Best for AWS development.** Trained on AWS APIs, free tier available.                                                            |
 | **Abacus.AI CodeLLM**    | Multi-model agentic coding             | `npm install -g @abacus-ai/cli`<br>See [Abacus AI Desktop](https://desktop.abacus.ai/)                | `abacusai`       | **Multi-model intelligence.** Switches between GPT-5/Claude Sonnet, 74% SWE-Bench Verified score, includes ChatLLM ($10/month).    |
 | **Atlassian Rovo Dev**   | Atlassian ecosystem integration        | Install ACLI: `brew install acli`<br>See [Rovo Dev](https://www.atlassian.com/software/rovo-dev)      | `acli rovodev`   | **Top SWE-bench performer (41.98%).** Deep Jira/Bitbucket/Confluence integration, enterprise-ready, powered by Teamwork Graph.     |
+| **Kiro CLI**             | Spec-driven development, autonomous coding | `curl -fsSL https://cli.kiro.dev/install \| bash`<br>See [Kiro CLI](https://kiro.dev/cli/)        | `kiro`           | **Amazon's spec-driven agentic assistant.** Enforces specifications before coding, smart hooks for automated workflows, custom agents, MCP integration, and autonomous multi-day coding sessions. |
 
 ---
 
@@ -216,6 +217,31 @@ Think of an AI coding agent as a **smart assistant that helps you write, edit, a
 - Command-line only (no GUI)
 - Less polished than commercial tools
 - Requires Python/pip installation
+
+---
+
+### Kiro CLI - The Spec-Driven Autonomous Agent
+
+**Official Docs:** https://kiro.dev/cli/
+
+**What makes it special:**
+- **Spec-driven development (SDD)** - enforces structured specifications before writing code
+- **Smart hooks** - event-driven automation (security scans on save, architecture updates on commit)
+- **Autonomous sessions** - can work independently for hours or days with minimal supervision
+- **Custom agents** - create specialized agents for your specific workflows
+- **MCP integration** - connect external tools via Model Context Protocol
+- **Steering files** - guardrails that enforce team conventions and security standards
+
+**Best for:**
+- Enterprise teams wanting structured, auditable AI development
+- Long-running autonomous coding tasks
+- Projects requiring specification-first methodology
+- AWS-integrated workflows (though works with any cloud/stack)
+
+**Limitations:**
+- Newer entrant (announced at AWS re:Invent 2025)
+- Community and ecosystem still growing
+- Proprietary license (unlike Aider)
 
 ---
 
@@ -438,8 +464,9 @@ We focus on **Claude Code** because:
 - **Cursor:** https://cursor.com/docs
 - **Aider:** https://aider.chat/docs
 - **Gemini:** https://ai.google.dev/docs
+- **Kiro CLI:** https://kiro.dev/cli/
 
-**This guide last updated:** January 2025
+**This guide last updated:** February 2026
 
 ---
 
